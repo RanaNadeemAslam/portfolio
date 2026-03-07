@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing 6+ years of Android & iOS development.
 
-**Live:** [nadeemaslam.com](https://nadeemaslam.com)
+**Live:** [nadeemaslam.dev](https://nadeemaslam.dev)
 
 ---
 
