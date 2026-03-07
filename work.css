@@ -1,0 +1,424 @@
+/* ========================================
+   Work Page — jonnyczar.com/work style
+   Full-width cards, large screenshots
+   ======================================== */
+
+/* Page header */
+.work-hero {
+  padding: 160px 0 80px;
+  border-bottom: 1px solid var(--border);
+}
+
+.work-hero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+
+.work-hero p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* Active nav */
+.nav-active {
+  color: var(--text) !important;
+}
+
+/* Work grid */
+.work-grid {
+  padding: 0 0 40px;
+}
+
+/* Work card */
+.work-card {
+  display: block;
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border);
+  transition: opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.work-card:hover {
+  opacity: 0.8;
+}
+
+/* Card text */
+.work-card-text {
+  margin-bottom: 40px;
+}
+
+.work-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.work-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--android);
+  background: rgba(52, 168, 83, 0.08);
+  padding: 5px 14px;
+  border-radius: 50px;
+}
+
+.work-tag.ios {
+  color: var(--ios);
+  background: rgba(0, 122, 255, 0.08);
+}
+
+.work-tag.both {
+  color: var(--both);
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.work-tag-subtle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.work-card-text h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.work-card-text p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.work-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.work-card-chips span {
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.work-card-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+}
+
+.work-card-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text);
+}
+
+/* Screenshots */
+.work-card-screens {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 16px;
+  background: #f2f2f2;
+  padding: 32px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.work-card-screens::-webkit-scrollbar {
+  height: 6px;
+}
+
+.work-card-screens::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.work-card-screens::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.screens-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: max-content;
+}
+
+.screens-row img {
+  height: 480px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.screens-row img:hover {
+  transform: translateY(-6px);
+}
+
+.screens-row.landscape {
+  width: max-content;
+}
+
+.screens-row.landscape img {
+  height: 320px;
+  width: auto;
+}
+
+/* iOS preview (no screenshots — icon + stats) */
+.work-card-preview {
+  width: 100%;
+  border-radius: 16px;
+  background: #f2f2f2;
+  padding: 48px 40px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.preview-icon-large img {
+  width: 140px;
+  height: 140px;
+  border-radius: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.preview-stats {
+  display: flex;
+  gap: 40px;
+}
+
+.preview-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.preview-stats strong {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.preview-stats span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* CTA section */
+.work-cta {
+  padding: 100px 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.work-cta h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.work-cta p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.work-cta-links {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.work-cta-links a {
+  font-size: 0.95rem;
+  font-weight: 700;
+  position: relative;
+  transition: opacity 0.25s ease;
+}
+
+.work-cta-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text);
+}
+
+.work-cta-links a:hover {
+  opacity: 0.6;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 900px) {
+  .work-hero {
+    padding: 120px 0 48px;
+  }
+
+  .work-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .work-card {
+    padding: 40px 0;
+  }
+
+  .work-card-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .work-card-meta {
+    flex-wrap: wrap;
+  }
+
+  .screens-row img {
+    height: 360px;
+  }
+
+  .screens-row.landscape img {
+    height: 240px;
+  }
+
+  .work-card-preview {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 32px 24px;
+  }
+
+  .preview-stats {
+    gap: 24px;
+  }
+
+  .preview-stats strong {
+    font-size: 1.4rem;
+  }
+
+  .work-card-chips {
+    gap: 6px;
+  }
+
+  .work-card-chips span {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .work-hero {
+    padding: 100px 0 36px;
+  }
+
+  .work-hero h1 {
+    font-size: 2rem;
+  }
+
+  .work-hero p {
+    font-size: 1rem;
+  }
+
+  .work-card {
+    padding: 32px 0;
+  }
+
+  .work-card-text {
+    margin-bottom: 24px;
+  }
+
+  .work-card-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .work-card-text p {
+    font-size: 0.9rem;
+  }
+
+  .screens-row {
+    gap: 12px;
+  }
+
+  .screens-row img {
+    height: 260px;
+  }
+
+  .screens-row.landscape img {
+    height: 180px;
+  }
+
+  .work-card-screens {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .work-card-preview {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .preview-icon-large img {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+  }
+
+  .preview-stats {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .preview-stats strong {
+    font-size: 1.2rem;
+  }
+
+  .work-cta {
+    padding: 60px 0;
+  }
+
+  .work-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .work-cta-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .work-card-chips span {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+}
