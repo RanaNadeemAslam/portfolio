@@ -104,6 +104,9 @@ if (form) {
       const data = await res.json();
 
       if (data.success) {
+        if (typeof gtag === 'function') {
+          gtag('event', 'form_submit', { event_category: 'contact', event_label: 'portfolio_form' });
+        }
         form.innerHTML = '<div class="form-status success" role="alert">Thanks! I\'ll be in touch within 24 hours.</div>';
       } else {
         throw new Error('Submission failed');
@@ -122,4 +125,21 @@ if (form) {
     }
   });
 }
+
+// Track outbound link clicks
+document.querySelectorAll('a[target="_blank"], a[href^="mailto:"], a[href^="https://wa.me"]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof gtag !== 'function') return;
+    const href = link.getAttribute('href');
+    let label = 'other';
+    if (href.includes('linkedin.com')) label = 'linkedin';
+    else if (href.includes('fiverr.com')) label = 'fiverr';
+    else if (href.includes('github.com')) label = 'github';
+    else if (href.includes('wa.me')) label = 'whatsapp';
+    else if (href.includes('mailto:')) label = 'email';
+    else if (href.includes('play.google.com')) label = 'play_store';
+    else if (href.includes('apps.apple.com')) label = 'app_store';
+    gtag('event', 'outbound_click', { event_category: 'engagement', event_label: label, link_url: href });
+  });
+});
 
