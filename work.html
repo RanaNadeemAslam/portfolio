@@ -22,33 +22,38 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="work.css">
 </head>
 <body>
 
+  <a href="#main" class="skip-to-content">Skip to content</a>
+
   <!-- Nav -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#highlights">Highlights</a>
+    <a href="work.html" class="nav-active">Work</a>
+    <a href="https://www.linkedin.com/in/nadeem-aslam-android/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="index.html#contact" class="nav-cta">Get in touch &rarr;</a>
+  </div>
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Nadeem Aslam</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html#highlights">Highlights</a>
-        <a href="work.html" class="nav-active">Work</a>
-        <a href="https://www.linkedin.com/in/nadeem-aslam-android/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="index.html#contact" class="nav-cta">Get in touch &rarr;</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- Page Header -->
   <header class="work-hero">
     <div class="section-inner">
       <h1>Work</h1>
-      <p>A selection of apps I've built and shipped. 10M+ downloads across Play Store and App Store.</p>
+      <p>A selection of apps I've built and shipped. 5M+ downloads across Play Store and App Store.</p>
     </div>
   </header>
 
@@ -72,11 +77,25 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row">
-            <img src="assets/ss-virtual5g-1.jpg" alt="Virtual 5G — Home screen" loading="lazy">
-            <img src="assets/ss-virtual5g-2.jpg" alt="Virtual 5G — App acceleration" loading="lazy">
-            <img src="assets/ss-virtual5g-3.jpg" alt="Virtual 5G — Settings" loading="lazy">
-            <img src="assets/ss-virtual5g-4.jpg" alt="Virtual 5G — Speed Control" loading="lazy">
-            <img src="assets/ss-virtual5g-5.jpg" alt="Virtual 5G — Modes" loading="lazy">
+            <img src="assets/ss-virtual5g-1.jpg" alt="Virtual 5G — Home screen" width="288" height="512" loading="lazy">
+            <img src="assets/ss-virtual5g-2.jpg" alt="Virtual 5G — App acceleration" width="288" height="512" loading="lazy">
+            <img src="assets/ss-virtual5g-3.jpg" alt="Virtual 5G — Settings" width="288" height="512" loading="lazy">
+            <img src="assets/ss-virtual5g-4.jpg" alt="Virtual 5G — Speed Control" width="288" height="512" loading="lazy">
+            <img src="assets/ss-virtual5g-5.jpg" alt="Virtual 5G — Modes" width="288" height="512" loading="lazy">
+          </div>
+        </div>
+        <div class="case-study">
+          <div class="case-study-item">
+            <h4>Challenge</h4>
+            <p>Build a network optimization app that scales to millions of users while maintaining fast speeds and low battery drain.</p>
+          </div>
+          <div class="case-study-item">
+            <h4>Solution</h4>
+            <p>Engineered proxy architecture in Kotlin with MVVM, plus subscription monetization with Unity Ads integration.</p>
+          </div>
+          <div class="case-study-item">
+            <h4>Result</h4>
+            <p>8.9M downloads, 4.0-star rating, 23K+ reviews. Top network tools category performer.</p>
           </div>
         </div>
       </a>
@@ -97,11 +116,25 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row">
-            <img src="assets/ss-vgep-1.jpg" alt="VPN Express — Connect" loading="lazy">
-            <img src="assets/ss-vgep-2.jpg" alt="VPN Express — Protected" loading="lazy">
-            <img src="assets/ss-vgep-3.jpg" alt="VPN Express — Servers" loading="lazy">
-            <img src="assets/ss-vgep-4.jpg" alt="VPN Express — Server List" loading="lazy">
-            <img src="assets/ss-vgep-5.jpg" alt="VPN Express — Features" loading="lazy">
+            <img src="assets/ss-vgep-1.jpg" alt="VPN Express — Connect" width="288" height="512" loading="lazy">
+            <img src="assets/ss-vgep-2.jpg" alt="VPN Express — Protected" width="288" height="512" loading="lazy">
+            <img src="assets/ss-vgep-3.jpg" alt="VPN Express — Servers" width="288" height="512" loading="lazy">
+            <img src="assets/ss-vgep-4.jpg" alt="VPN Express — Server List" width="288" height="512" loading="lazy">
+            <img src="assets/ss-vgep-5.jpg" alt="VPN Express — Features" width="288" height="512" loading="lazy">
+          </div>
+        </div>
+        <div class="case-study">
+          <div class="case-study-item">
+            <h4>Challenge</h4>
+            <p>Create a high-performance VPN with seamless server switching and strong encryption, while monetizing without hurting UX.</p>
+          </div>
+          <div class="case-study-item">
+            <h4>Solution</h4>
+            <p>Led 5 engineers to build native Kotlin VPN. Balanced Unity ads with subscriptions for optimal revenue-UX tradeoff.</p>
+          </div>
+          <div class="case-study-item">
+            <h4>Result</h4>
+            <p>1.7M downloads, 35% revenue increase. Successfully launched iOS counterpart.</p>
           </div>
         </div>
       </a>
@@ -122,7 +155,7 @@
         </div>
         <div class="work-card-preview">
           <div class="preview-icon-large">
-            <img src="assets/icon-netoptimizer-ios.png" alt="NetOptimizer icon">
+            <img src="assets/icon-netoptimizer-ios.png" alt="NetOptimizer icon" width="512" height="512" loading="lazy">
           </div>
           <div class="preview-stats">
             <div><strong>4.5</strong><span>Rating</span></div>
@@ -148,9 +181,9 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row">
-            <img src="assets/ss-vpnexpress-ios-1.png" alt="VPN Express iOS — Home" loading="lazy">
-            <img src="assets/ss-vpnexpress-ios-2.png" alt="VPN Express iOS — Servers" loading="lazy">
-            <img src="assets/ss-vpnexpress-ios-3.png" alt="VPN Express iOS — Speed Test" loading="lazy">
+            <img src="assets/ss-vpnexpress-ios-1.png" alt="VPN Express iOS — Home" width="1242" height="2688" loading="lazy">
+            <img src="assets/ss-vpnexpress-ios-2.png" alt="VPN Express iOS — Servers" width="1242" height="2688" loading="lazy">
+            <img src="assets/ss-vpnexpress-ios-3.png" alt="VPN Express iOS — Speed Test" width="1242" height="2688" loading="lazy">
           </div>
         </div>
       </a>
@@ -171,9 +204,9 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row landscape">
-            <img src="assets/ss-smartiptv-1.jpg" alt="Smart IPTV — Home" loading="lazy">
-            <img src="assets/ss-smartiptv-2.jpg" alt="Smart IPTV — Playlists" loading="lazy">
-            <img src="assets/ss-smartiptv-3.jpg" alt="Smart IPTV — Player" loading="lazy">
+            <img src="assets/ss-smartiptv-1.jpg" alt="Smart IPTV — Home" width="512" height="288" loading="lazy">
+            <img src="assets/ss-smartiptv-2.jpg" alt="Smart IPTV — Playlists" width="512" height="288" loading="lazy">
+            <img src="assets/ss-smartiptv-3.jpg" alt="Smart IPTV — Player" width="512" height="288" loading="lazy">
           </div>
         </div>
       </a>
@@ -194,9 +227,23 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row">
-            <img src="assets/ss-orion-1.png" alt="Orion AI — AI Image Generator" loading="lazy">
-            <img src="assets/ss-orion-2.png" alt="Orion AI — Ask AI Anything" loading="lazy">
-            <img src="assets/ss-orion-3.png" alt="Orion AI — Analyze Images" loading="lazy">
+            <img src="assets/ss-orion-1.png" alt="Orion AI — AI Image Generator" width="1242" height="2688" loading="lazy">
+            <img src="assets/ss-orion-2.png" alt="Orion AI — Ask AI Anything" width="1242" height="2688" loading="lazy">
+            <img src="assets/ss-orion-3.png" alt="Orion AI — Analyze Images" width="1242" height="2688" loading="lazy">
+          </div>
+        </div>
+        <div class="case-study">
+          <div class="case-study-item">
+            <h4>Challenge</h4>
+            <p>Build an AI chatbot supporting multiple models with a polished native iOS experience and offline capability.</p>
+          </div>
+          <div class="case-study-item">
+            <h4>Solution</h4>
+            <p>SwiftUI + Core Data for offline persistence. Integrated Gemini and Claude backends with image generation and analysis.</p>
+          </div>
+          <div class="case-study-item">
+            <h4>Result</h4>
+            <p>4.5-star App Store rating, 35 ratings. Users praised the clean, intuitive interface.</p>
           </div>
         </div>
       </a>
@@ -217,10 +264,10 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row">
-            <img src="assets/ss-roku-1.jpg" alt="Roku Remote — Device Discovery" loading="lazy">
-            <img src="assets/ss-roku-2.jpg" alt="Roku Remote — Remote Control" loading="lazy">
-            <img src="assets/ss-roku-3.jpg" alt="Roku Remote — Navigation Mode" loading="lazy">
-            <img src="assets/ss-roku-4.jpg" alt="Roku Remote — Keyboard" loading="lazy">
+            <img src="assets/ss-roku-1.jpg" alt="Roku Remote — Device Discovery" width="288" height="512" loading="lazy">
+            <img src="assets/ss-roku-2.jpg" alt="Roku Remote — Remote Control" width="288" height="512" loading="lazy">
+            <img src="assets/ss-roku-3.jpg" alt="Roku Remote — Navigation Mode" width="288" height="512" loading="lazy">
+            <img src="assets/ss-roku-4.jpg" alt="Roku Remote — Keyboard" width="288" height="512" loading="lazy">
           </div>
         </div>
       </a>
@@ -240,9 +287,9 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row">
-            <img src="assets/ss-doctoc-1.png" alt="Doctoc — Home Dashboard" loading="lazy">
-            <img src="assets/ss-doctoc-2.png" alt="Doctoc — Calendar View" loading="lazy">
-            <img src="assets/ss-doctoc-3.png" alt="Doctoc — Messages" loading="lazy">
+            <img src="assets/ss-doctoc-1.png" alt="Doctoc — Home Dashboard" width="1320" height="2868" loading="lazy">
+            <img src="assets/ss-doctoc-2.png" alt="Doctoc — Calendar View" width="1320" height="2868" loading="lazy">
+            <img src="assets/ss-doctoc-3.png" alt="Doctoc — Messages" width="1320" height="2868" loading="lazy">
           </div>
         </div>
       </a>
@@ -263,11 +310,11 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row">
-            <img src="assets/ss-newshub-1.jpg" alt="NewsHub — Splash" loading="lazy">
-            <img src="assets/ss-newshub-2.jpg" alt="NewsHub — Countries & Feed" loading="lazy">
-            <img src="assets/ss-newshub-3.jpg" alt="NewsHub — Global Sources" loading="lazy">
-            <img src="assets/ss-newshub-4.jpg" alt="NewsHub — Reading" loading="lazy">
-            <img src="assets/ss-newshub-5.jpg" alt="NewsHub — Categories" loading="lazy">
+            <img src="assets/ss-newshub-1.jpg" alt="NewsHub — Splash" width="288" height="512" loading="lazy">
+            <img src="assets/ss-newshub-2.jpg" alt="NewsHub — Countries & Feed" width="288" height="512" loading="lazy">
+            <img src="assets/ss-newshub-3.jpg" alt="NewsHub — Global Sources" width="288" height="512" loading="lazy">
+            <img src="assets/ss-newshub-4.jpg" alt="NewsHub — Reading" width="288" height="512" loading="lazy">
+            <img src="assets/ss-newshub-5.jpg" alt="NewsHub — Categories" width="288" height="512" loading="lazy">
           </div>
         </div>
       </a>
@@ -288,11 +335,11 @@
         </div>
         <div class="work-card-screens">
           <div class="screens-row">
-            <img src="assets/ss-invoice-1.jpg" alt="Invoice Maker — Create Invoice" loading="lazy">
-            <img src="assets/ss-invoice-2.jpg" alt="Invoice Maker — Templates" loading="lazy">
-            <img src="assets/ss-invoice-3.jpg" alt="Invoice Maker — Edit & Sign" loading="lazy">
-            <img src="assets/ss-invoice-4.jpg" alt="Invoice Maker — Items" loading="lazy">
-            <img src="assets/ss-invoice-5.jpg" alt="Invoice Maker — Dashboard" loading="lazy">
+            <img src="assets/ss-invoice-1.jpg" alt="Invoice Maker — Create Invoice" width="288" height="512" loading="lazy">
+            <img src="assets/ss-invoice-2.jpg" alt="Invoice Maker — Templates" width="288" height="512" loading="lazy">
+            <img src="assets/ss-invoice-3.jpg" alt="Invoice Maker — Edit & Sign" width="288" height="512" loading="lazy">
+            <img src="assets/ss-invoice-4.jpg" alt="Invoice Maker — Items" width="288" height="512" loading="lazy">
+            <img src="assets/ss-invoice-5.jpg" alt="Invoice Maker — Dashboard" width="288" height="512" loading="lazy">
           </div>
         </div>
       </a>
@@ -311,6 +358,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">

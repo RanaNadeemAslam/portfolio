@@ -38,12 +38,15 @@
   display: block;
   padding: 60px 0;
   border-bottom: 1px solid var(--border);
-  transition: opacity 0.25s ease;
+  border-left: 3px solid transparent;
+  padding-left: 20px;
+  transition: border-color 0.3s ease;
   cursor: pointer;
 }
 
 .work-card:hover {
-  opacity: 0.8;
+  opacity: 1;
+  border-left-color: var(--accent);
 }
 
 /* Card text */
@@ -144,6 +147,7 @@
   background: #f2f2f2;
   padding: 24px;
   -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
 .work-card-screens::-webkit-scrollbar {
@@ -173,6 +177,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 .screens-row img:hover {
@@ -281,6 +286,38 @@
 }
 
 /* ========================================
+   Case Studies
+   ======================================== */
+
+.case-study {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.case-study-item h4 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.case-study-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ========================================
    Responsive
    ======================================== */
 
@@ -335,6 +372,17 @@
   .work-card-chips span {
     font-size: 0.72rem;
     padding: 4px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-card-text h2 { font-size: 1.3rem; }
+  .screens-row img { height: 260px; }
+  .screens-row.landscape img { height: 160px; }
+  .case-study {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
   }
 }
 

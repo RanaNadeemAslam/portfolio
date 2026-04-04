@@ -147,33 +147,42 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <a href="#main" class="skip-to-content">Skip to content</a>
+
   <!-- Nav -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <div class="nav-links" id="navLinks">
+    <a href="#highlights">Highlights</a>
+    <a href="work.html">Work</a>
+    <a href="https://www.linkedin.com/in/nadeem-aslam-android/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="#contact" class="nav-cta">Get in touch &rarr;</a>
+  </div>
   <nav class="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">Nadeem Aslam</a>
-      <div class="nav-links" id="navLinks">
-        <a href="#highlights">Highlights</a>
-        <a href="work.html">Work</a>
-        <a href="https://www.linkedin.com/in/nadeem-aslam-android/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#contact" class="nav-cta">Get in touch &rarr;</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- Hero -->
   <header class="hero" id="hero">
     <div class="hero-inner">
       <div class="hero-text">
         <h1>Senior Mobile<br>Developer</h1>
-        <p class="hero-sub">I craft high-performance Android & iOS apps that users love, from startup MVPs to apps with 10M+ downloads. 6+ years of shipping to Play Store & App Store.</p>
+        <p class="hero-sub">I craft high-performance Android & iOS apps that users love, from startup MVPs to apps with 5M+ downloads. 6+ years of shipping to Play Store & App Store.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get in touch</a>
+          <a href="work.html" class="btn-secondary">See my work</a>
+        </div>
         <div class="hero-meta">
           <div class="hero-socials">
             <a href="https://www.linkedin.com/in/nadeem-aslam-android/" target="_blank" rel="noopener">LinkedIn</a>
@@ -183,7 +192,7 @@
         </div>
       </div>
       <div class="hero-portrait">
-        <img src="assets/portrait.png" alt="Nadeem Aslam" class="portrait-img">
+        <img src="assets/portrait.png" alt="Nadeem Aslam" class="portrait-img" width="721" height="709">
       </div>
     </div>
   </header>
@@ -289,14 +298,14 @@
           <div class="project-stat">8.9M downloads &middot; 4.4★ &middot; 23K+ ratings</div>
         </div>
         <div class="project-visual">
-          <img src="assets/icon-virtual5g.png" alt="Virtual 5G" class="project-icon">
+          <img src="assets/icon-virtual5g.png" alt="Virtual 5G" class="project-icon" width="512" height="512" loading="lazy">
         </div>
       </a>
 
       <!-- Project 2: VPN Express Android -->
       <a href="https://play.google.com/store/apps/details?id=com.adaranet.vgep" target="_blank" rel="noopener" class="project reverse">
         <div class="project-visual">
-          <img src="assets/icon-vgep.png" alt="VPN Express" class="project-icon">
+          <img src="assets/icon-vgep.png" alt="VPN Express" class="project-icon" width="512" height="512" loading="lazy">
         </div>
         <div class="project-content">
           <div class="project-top">
@@ -327,14 +336,14 @@
           <div class="project-stat">4.7★ &middot; 41 ratings &middot; 19 languages</div>
         </div>
         <div class="project-visual">
-          <img src="assets/icon-netoptimizer-ios.png" alt="NetOptimizer" class="project-icon">
+          <img src="assets/icon-netoptimizer-ios.png" alt="NetOptimizer" class="project-icon" width="512" height="512" loading="lazy">
         </div>
       </a>
 
       <!-- Project 4: VPN Express iOS -->
       <a href="https://apps.apple.com/us/app/vpn-express-fast-secure-vpn/id6740760260" target="_blank" rel="noopener" class="project reverse">
         <div class="project-visual">
-          <img src="assets/icon-vpnexpress-ios.png" alt="VPN Express iOS" class="project-icon">
+          <img src="assets/icon-vpnexpress-ios.png" alt="VPN Express iOS" class="project-icon" width="512" height="512" loading="lazy">
         </div>
         <div class="project-content">
           <div class="project-top">
@@ -365,14 +374,14 @@
           <div class="project-stat">50K+ downloads</div>
         </div>
         <div class="project-visual">
-          <img src="assets/icon-smartiptv.png" alt="Smart IPTV" class="project-icon">
+          <img src="assets/icon-smartiptv.png" alt="Smart IPTV" class="project-icon" width="512" height="512" loading="lazy">
         </div>
       </a>
 
       <!-- Project 6: Orion AI -->
       <a href="https://apps.apple.com/us/app/orion-ai-chatbot-assistant/id6744879088" target="_blank" rel="noopener" class="project reverse">
         <div class="project-visual">
-          <img src="assets/icon-orion-ios.png" alt="Orion AI" class="project-icon">
+          <img src="assets/icon-orion-ios.png" alt="Orion AI" class="project-icon" width="512" height="512" loading="lazy">
         </div>
         <div class="project-content">
           <div class="project-top">
@@ -524,6 +533,10 @@
         <span class="testimonial-badge">5.0 &#9733;</span>
         <span>69 reviews on Fiverr &middot; Level 2 Seller</span>
       </div>
+
+      <div class="section-cta">
+        <a href="#contact" class="btn-primary">Start your project</a>
+      </div>
     </div>
   </section>
 
@@ -571,6 +584,26 @@
           <h2>Want to work together?<br>Drop me a line.</h2>
         </div>
         <div class="contact-right">
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+            <input type="hidden" name="access_key" value="b8ca2502-971d-46b3-bc86-2b6f9c883d24">
+            <input type="hidden" name="subject" value="New Portfolio Contact">
+            <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit">Send message</button>
+          </form>
+
           <div class="contact-links">
             <a href="mailto:link2nadeemaslam@gmail.com" class="contact-link">
               <span class="contact-link-label">Email</span>
@@ -580,11 +613,6 @@
             <a href="https://www.linkedin.com/in/nadeem-aslam-android/" target="_blank" rel="noopener" class="contact-link">
               <span class="contact-link-label">LinkedIn</span>
               <span class="contact-link-value">nadeem-aslam-android</span>
-              <span class="contact-link-arrow">&rarr;</span>
-            </a>
-            <a href="https://github.com/RanaNadeemAslam" target="_blank" rel="noopener" class="contact-link">
-              <span class="contact-link-label">GitHub</span>
-              <span class="contact-link-value">RanaNadeemAslam</span>
               <span class="contact-link-arrow">&rarr;</span>
             </a>
             <a href="https://www.fiverr.com/nadeem585" target="_blank" rel="noopener" class="contact-link">
@@ -602,6 +630,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">

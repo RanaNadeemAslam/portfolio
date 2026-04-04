@@ -1,17 +1,34 @@
 // Nav toggle
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
+const navBackdrop = document.getElementById('navBackdrop');
+
+function openNav() {
+  navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.classList.add('active');
+  navLinks.classList.add('active');
+  if (navBackdrop) navBackdrop.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.classList.remove('active');
+  navLinks.classList.remove('active');
+  if (navBackdrop) navBackdrop.classList.remove('active');
+  document.body.style.overflow = '';
+}
 
 navToggle.addEventListener('click', () => {
-  navToggle.classList.toggle('active');
-  navLinks.classList.toggle('active');
+  navLinks.classList.contains('active') ? closeNav() : openNav();
 });
 
+if (navBackdrop) {
+  navBackdrop.addEventListener('click', closeNav);
+}
+
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navToggle.classList.remove('active');
-    navLinks.classList.remove('active');
-  });
+  link.addEventListener('click', closeNav);
 });
 
 // Fade-in on scroll
@@ -58,16 +75,51 @@ if (strip) {
   strip.classList.add('animate');
 }
 
-// Content protection
-document.addEventListener('contextmenu', e => e.preventDefault());
-
-document.addEventListener('keydown', e => {
-  if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.key === 's')) {
+// Page transition for internal links
+document.querySelectorAll('a[href$=".html"], a[href="index.html"], a[href="work.html"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    if (link.target === '_blank' || link.getAttribute('href').startsWith('#')) return;
     e.preventDefault();
-  }
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.25s ease';
+    setTimeout(() => window.location = link.href, 250);
+  });
 });
 
-document.querySelectorAll('img').forEach(img => {
-  img.setAttribute('draggable', 'false');
-  img.addEventListener('dragstart', e => e.preventDefault());
-});
+// Contact form (Web3Forms)
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        form.innerHTML = '<div class="form-status success" role="alert">Thanks! I\'ll be in touch within 24 hours.</div>';
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = originalText;
+      const existing = form.querySelector('.form-status');
+      if (existing) existing.remove();
+      const status = document.createElement('div');
+      status.className = 'form-status error';
+      status.setAttribute('role', 'alert');
+      status.textContent = 'Something went wrong. Please try email or WhatsApp.';
+      form.appendChild(status);
+      setTimeout(() => status.remove(), 5000);
+    }
+  });
+}
+
